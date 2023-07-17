@@ -9,7 +9,7 @@ export function map(input) {
   }
 
   const itineraries = input.plan.itineraries.map(it => {
-    const co2Sum = itinerary.legs.reduce((acc, curr) => acc + curr.co2, 0)
+    const co2Sum = it.legs.reduce((acc, curr) => acc + curr.co2, 0)
 
     const itinerary = {
       "co2": co2Sum,
