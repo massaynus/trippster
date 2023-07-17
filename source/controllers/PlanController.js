@@ -1,5 +1,6 @@
 import * as openTripClientService from '../services/openTripClientService'
 import * as emissionsService from '../services/emissionsService'
+import RoutePlaneResourceMapper from '../mappers/RoutePlaneResourceMapper'
 
 /**
  * Get a route plan and ammend CO2 emissions
@@ -14,5 +15,7 @@ export async function getRoutePlan(req, res) {
 
   const data = emissionsService.ammendResponse(response.data)
 
-  res.json(data)
+  const transformedData = RoutePlaneResourceMapper.map(data)
+
+  res.json(transformedData)
 }
