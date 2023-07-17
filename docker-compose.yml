@@ -1,6 +1,6 @@
 version: "3.3"
 services:
-  project_name:
+  trippster:
     build:
       context: .
       dockerfile: Dockerfile
