@@ -1,21 +1,25 @@
 {
-  "name": "project_name",
+  "name": "trippster",
   "version": "1.0.0",
   "description": "",
   "main": "source/index.js",
   "scripts": {
     "start": "npx babel-node source/index.js",
     "build": "npx babel ./source --out-dir ./dist --source-maps --copy-files --compact auto --no-comments --verbose --delete-dir-on-start",
-    "deploy": "npm run build && node dist/index.js"
+    "deploy": "npm run build && node dist/index.js",
+    "aws:deploy": "npm run build && serverless deploy"
   },
   "keywords": [],
   "author": "massaynus",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.4.0",
+    "cors": "^2.8.5",
     "cron": "^1.8.2",
     "dotenv": "^10.0.0",
-    "lodash": "^4.17.21"
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",

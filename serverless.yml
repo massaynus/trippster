@@ -1,0 +1,17 @@
+service: trippster
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  api:
+    handler: handler.api
+    events:
+      - http: ANY /
+      - http: ANY /{proxy+}
+    environment:
+      ENV: Developement
+      API_URL: https://finland-staging.trip-planner.maas.global/otp
+      API_KEY: 2TCLEtnmLprXDMVroWbsUu8xyUJaK2MPrkaue7rm

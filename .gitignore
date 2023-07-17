@@ -1,9 +1,9 @@
+# package directories
 node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# build files
 dist
-database
-exports
-redis
-rabbitmq
-package-lock.json
-.env
-.vscode
