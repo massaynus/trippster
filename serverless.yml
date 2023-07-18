@@ -15,3 +15,5 @@ functions:
       ENV: Developement
       API_URL: https://finland-staging.trip-planner.maas.global/otp
       API_KEY: 2TCLEtnmLprXDMVroWbsUu8xyUJaK2MPrkaue7rm
+      # On a real project I would AWS secrets manager but it's not free to use :joy:
+      # So instead of pushing the .env file which can be waaay worst im putting the key here :rofl:
