@@ -1,3 +1,8 @@
+/**
+ * Transform the RoutePlanResource to the requested Schema
+ * @param {Object} input the PlannerResource from the OpenTripAPI
+ * @returns {Object} a transformed object that adheres to schema
+ */
 export function map(input) {
 
   const from = {
@@ -31,6 +36,7 @@ export function map(input) {
   const output = { plan: { from, to, itineraries } }
 
   return output
+
 }
 
 export default { map }
