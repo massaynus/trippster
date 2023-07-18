@@ -9,7 +9,7 @@ const client = axios.create({
 })
 
 /**
- * make a request to OpenTripPlanner and retrieve the PlannerResource
+ * make a request to OpenTripPlanner and retrieve the TripPlannerResponse
  * @param {string} from the starting coordinates
  * @param {string} to the arrival coordinates
  * @param {string} date the starting or arrival date of the trip
@@ -17,7 +17,7 @@ const client = axios.create({
  * @param {"WALK" | "TRANSIT" | "BICYCLE" | "BICYCLE_RENT" | "BICYCLE_PARK" | "CAR" | "CAR_PARK" | "TRAM" | "SUBWAY" | "RAIL" | "BUS" | "CABLE_CAR" | "FERRY" | "GONDOLA" | "FUNICULAR" | "AIRPLANE"} mode the transit mode
  * @param {boolean} arriveBy whether the trip should depart or arrive at the specified date and time.
  * @param {boolean} wheelchair whether the trip must be wheelchair accessible
- * @returns PlannerResponse
+ * @returns TripPlannerResponse
  */
 export async function getPlan(from, to, date, time, mode, arriveBy, wheelchair) {
   // the API response must be typed but we are using JS anyways so it doesn't make much sense
